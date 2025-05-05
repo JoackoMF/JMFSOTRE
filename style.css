@@ -1,0 +1,562 @@
+/* Variables para colores */
+:root {
+    --primary: #4a90e2;       /* Un azul más moderno */
+    --primary-dark: #3575c1;
+    --secondary: #f0f0f0;     /* Un gris muy claro, casi blanco */
+    --background: #fafafa;    /* Un blanco roto suave */
+    --text: #333;             /* Gris oscuro para texto */
+    --accent: #4caf50;        /* Verde para acentos positivos */
+    --dark: #222;             /* Casi negro para el footer */
+    --white: #fff;
+    --error: #d32f2f;        /* Rojo para errores */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    --border-radius: 8px;     /* Bordes redondeados */
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
+    line-height: 1.6;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para el encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.cart-button {
+    background-color: var(--primary);
+    color: var(--white) !important;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cart-button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* Estilos para el carrusel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.prev {
+    left: 1rem;
+}
+
+.next {
+    right: 1rem;
+}
+
+/* Estilos para la sección de productos */
+.products {
+    padding: 3rem 2rem;
+    background-color: var(--secondary);
+    transition: background-color 0.3s ease;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    padding-bottom: 0.5em;
+}
+
+.products h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.product-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.25rem;
+    color: var(--text);
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    margin: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.02);
+}
+
+/* Estilos para el modal de contacto */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: translateY(-30px);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+.close-modal {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: var(--primary);
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    font-size: 1.75rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.submit-button {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.submit-button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.01);
+}
+
+/* Estilo para mensajes de error en el formulario */
+.form-error {
+    color: var(--error);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Estilo para el mensaje de éxito */
+.success-message {
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+/* Estilos para el carrito */
+#cart-items {
+    margin-top: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item p {
+    margin: 0.5rem 0;
+}
+
+.cart-quantity {
+    width: 3rem;
+    padding: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.remove-from-cart {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove-from-cart:hover {
+    background-color: #ff4757;
+}
+
+.cart-item-price {
+    font-weight: bold;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin-left: 1rem;
+    }
+
+    .carousel-container {
+        height: 350px;
+    }
+
+    .products {
+        padding: 2rem 1rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .carousel-container {
+        height: 250px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 1rem;
+    }
+}
+/* Estilos para el carrito desplegable */
+#cart-dropdown {
+    position: absolute;
+    top: 60px; /* Ajusta este valor según la altura de tu header */
+    right: 20px;
+    background-color: var(--white);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 300px; /* Ancho del desplegable */
+    display: none; /* Ocultar inicialmente */
+}
+
+#cart-items {
+    max-height: 200px; /* Altura máxima del área de items */
+    overflow-y: auto;  /* Añadir scroll si es necesario */
+    margin-bottom: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+.cart-quantity {
+    width: 40px;
+    padding: 2px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.remove-from-cart {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 2px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove-from-cart:hover {
+    background-color: #ff4757;
+}
+
+#cart-total {
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#checkout-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#checkout-button:hover {
+    background-color: var(--primary-dark);
+}
+
+.show-cart {
+    display: block !important; /* Clase para mostrar el carrito */
+}

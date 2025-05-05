@@ -1,0 +1,374 @@
+/* Estilos específicos para la página Sobre Nosotros */
+
+/* Hero Section */
+.hero-section {
+    height: 300px;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.hero-content {
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 40px;
+    background-color: var(--secondary);
+    margin-bottom: 60px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 60px 40px;
+    background-color: var(--background);
+    margin-bottom: 60px;
+}
+
+.mission-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.mission-content {
+    flex: 1;
+}
+
+.mission-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.mission-box {
+    background-color: var(--secondary);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.mission-box p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.mission-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mission-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Values Section */
+.values-section {
+    padding: 60px 40px;
+    background-color: var(--secondary);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.values-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--text);
+}
+
+.values-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.value-card p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Team Section */
+.team-section {
+    padding: 60px 40px;
+    background-color: var(--background);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--text);
+}
+
+.team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.team-member {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.member-photo {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    margin: 15px 0 5px;
+    color: var(--text);
+}
+
+.member-role {
+    font-size: 16px;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.member-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0 20px 20px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 60px 40px;
+    background-color: var(--secondary);
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--text);
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.testimonial-content {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.testimonial-content::before {
+    content: '"';
+    font-size: 60px;
+    color: var(--primary);
+    opacity: 0.2;
+    position: absolute;
+    top: -30px;
+    left: -15px;
+}
+
+.testimonial-author {
+    font-weight: 500;
+    text-align: right;
+    color: var(--primary);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .about-container,
+    .mission-container {
+        flex-direction: column;
+    }
+    
+    .about-image,
+    .mission-image {
+        order: -1;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .about-section,
+    .mission-section,
+    .values-section,
+    .team-section,
+    .testimonials-section {
+        padding: 40px 20px;
+    }
+    
+    .about-container,
+    .mission-container {
+        gap: 20px;
+    }
+    
+    .values-container,
+    .team-container,
+    .testimonials-container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .about-content h2,
+    .mission-content h2,
+    .values-section h2,
+    .team-section h2,
+    .testimonials-section h2 {
+        font-size: 26px;
+    }
+}
+
+/* Estilo adicional para el enlace activo en la navegación */
+nav ul li a.active {
+    color: var(--primary);
+    font-weight: bold;
+}

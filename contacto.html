@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - JMF Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contacto.css">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>JMFSTORE</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="#" class="cart-button">Carrito <span id="cart-amount">0$</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-form">
+            <h2>Contáctanos</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Asunto</label>
+                    <select id="subject" name="subject">
+                        <option value="consulta">Consulta general</option>
+                        <option value="pedido">Pedido de funda personalizada</option>
+                        <option value="soporte">Soporte técnico</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Enviar mensaje</button>
+            </form>
+        </section>
+
+        <section class="contact-social">
+            <h2>¡Síguenos en nuestras redes!</h2>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 JMF STORE - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>  </body>
+</html>

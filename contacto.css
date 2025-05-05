@@ -1,0 +1,72 @@
+/* Estilos para la página de contacto */
+
+.contact-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.contact-form {
+    flex: 2;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.contact-social {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--secondary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-social h2 {
+    margin-bottom: 20px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: var(--text);
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+}
+#message {
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+    /* Otros estilos que ya tengas para el textarea */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .contact-main {
+        flex-direction: column;
+    }
+
+    .contact-form, .contact-social {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

@@ -4,43 +4,43 @@ const products = [
         id: 1,
         name: "Funda Goku",
         price: 10000,
-        image: "/images/goku.png"
+        image: "images/goku.png"
     },
     {
         id: 2,
         name: "Funda Gojo",
         price: 10000,
-        image: "/images/gojo.png"
+        image: "images/gojo.png"
     },
     {
         id: 3,
         name: "Funda Meliodas",
         price: 10000,
-        image: "/images/meliodas.png"
+        image: "images/meliodas.png"
     },
     {
         id: 4,
         name: "Funda Escanor",
         price: 10000,
-        image: "/images/escanor.png"
+        image: "images/escanor.png"
     },
     {
         id: 5,
         name: "Funda Ippo",
         price: 10000,
-        image: "/images/ippo.png"
+        image: "images/ippo.png"
     },
     {
         id: 6,
         name: "Funda Kaneki",
         price: 10000,
-        image: "/images/kaneki.png"
+        image: "images/kaneki.png"
     },
     {
         id: 7,
         name: "Funda Naruto",
         price: 10000,
-        image: "/images/naruto.png"
+        image: "images/naruto.png"
     }
 ];
 
